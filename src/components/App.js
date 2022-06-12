@@ -1,18 +1,21 @@
 import React from 'react';
-import {View,Text,SafeAreaView, FlatList,StyleSheet} from 'react-native'
+import {View,Text,SafeAreaView, FlatList,StyleSheet} from 'react-native';
 import Card from './Card/Card';
+import Search from './Search/Search';
 
 import data from './data.json';
 
 const App =()=>{
-
+  const products = ({ item }) => <Card products={item} />
   return(
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>TEKNOLOGY STORE</Text>
         <View>
           <FlatList data={data}
           numColumns={2}
-          renderItem={({item})=> <Card news={item}/>}>
+          keyExtractor={(item) => item.idd.toString()}
+          ListHeaderComponent={() => (<Search />)}
+          renderItem={products}>
 
           </FlatList>
         </View>
@@ -24,7 +27,6 @@ const App =()=>{
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    backgroundColor: "#fff",
     marginTop:20,
     marginBottom:70,
   },

@@ -3,7 +3,7 @@ import {StyleSheet, Dimensions} from 'react-native';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#eceff1',
+    backgroundColor: '#d5d9de',
     padding: 15,
     margin: 10,
     borderRadius: 12,
@@ -21,7 +21,7 @@ export default StyleSheet.create({
     fontSize: 16,
     marginTop: 4,
     borderRadius: 10,
-    textAlign: 'center',
+    textAlign: 'left',
     marginTop: 8,
   },
   image: {
