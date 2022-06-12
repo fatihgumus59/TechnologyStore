@@ -9,7 +9,7 @@ const App =()=>{
   const products = ({ item }) => <Card products={item} />
   return(
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>TEKNOLOGY STORE</Text>
+      <Text style={styles.title}>TECHNOLOGY STORE</Text>
         <View>
           <FlatList data={data}
           numColumns={2}
